@@ -83,7 +83,7 @@ CREATE DATABASE student_course_db;
 ````
 #### Step 2:-Inside appliction.properties file
 ````
-spring.datasource.url=jdbc:mysql://localhost:3306/student_course
+spring.datasource.url=jdbc:mysql://localhost:3306/student_course_db
 spring.datasource.username=root
 spring.datasource.password=your_password
 spring.jpa.hibernate.ddl-auto=update
