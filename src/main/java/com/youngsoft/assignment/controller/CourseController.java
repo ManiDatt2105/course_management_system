@@ -33,7 +33,7 @@ public class CourseController {
     @Operation(summary = "Get course details of specified name")
     public List<CourseResponse> getWithName(@PathVariable String title){
         log.info("Received request to get course details of {} ",title);
-        return courseService.getCourse(title);
+        return courseService.getCourse(title); 
     }
     @GetMapping("/course_count/{courseName}")
     @Operation(summary = "Get Student count of specified course")

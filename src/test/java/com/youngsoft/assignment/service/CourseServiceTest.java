@@ -2,6 +2,7 @@ package com.youngsoft.assignment.service;
 
 import com.youngsoft.assignment.dto.CourseRequest;
 import com.youngsoft.assignment.dto.CourseResponse;
+import com.youngsoft.assignment.dto.PageResponse;
 import com.youngsoft.assignment.entity.Course;
 import com.youngsoft.assignment.repository.CourseRepository;
 import jakarta.inject.Inject;
@@ -68,7 +69,7 @@ public class CourseServiceTest {
         Page<Course> coursePage=new PageImpl<>(List.of(c1,c2),page,2);
         when(courseRepo.findAll(page)).thenReturn(coursePage);
 
-        Page<CourseResponse> result=courseService.getall(page);
+        PageResponse<CourseResponse> result=courseService.getall(page);
         assertEquals(2,result.getContent().size());
         assertEquals("C Programming",result.getContent().get(0).getTitle());
         assertEquals("Python",result.getContent().get(1).getTitle());
@@ -80,7 +81,7 @@ public class CourseServiceTest {
         Pageable page=PageRequest.of(0,2);
         Page<Course> empty=new PageImpl<>(List.of(),page,0);
         when(courseRepo.findAll(page)).thenReturn(empty);
-        Page<CourseResponse> res=courseService.getall(page);
+        PageResponse<CourseResponse> res=courseService.getall(page);
         assertEquals(0,res.getContent().size());
         assertEquals(0,res.getTotalElements());
     }

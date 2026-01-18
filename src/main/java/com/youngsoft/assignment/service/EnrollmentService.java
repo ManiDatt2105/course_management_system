@@ -2,6 +2,7 @@ package com.youngsoft.assignment.service;
 
 import com.youngsoft.assignment.dto.EnrollmentRequest;
 import com.youngsoft.assignment.dto.EnrollmentResponse;
+import com.youngsoft.assignment.dto.PageResponse;
 import com.youngsoft.assignment.dto.StudentEnrolled;
 import com.youngsoft.assignment.entity.Course;
 import com.youngsoft.assignment.entity.Enrollment;
@@ -56,18 +57,31 @@ public class EnrollmentService {
                 saved.getEnrolledDate());
     }
 
-    public Page<StudentEnrolled> getByName(String title, Pageable page) {
+    public PageResponse<StudentEnrolled> getByName(String title, Pageable page) {
         log.debug("Getting student data for course {}",title);
-        return enrollRepo.findByCourseTitle(title,page);
+        Page<StudentEnrolled> res=enrollRepo.findByCourseTitle(title,page);
+        return new PageResponse<>(
+                res.getContent(),
+                res.getNumber(),
+                res.getSize(),
+                res.getTotalElements(),
+                res.getTotalPages()
+        );
     }
 
-    public Page<EnrollmentResponse> search(String studentName,Pageable page) {
+    public PageResponse<EnrollmentResponse> search(String studentName,Pageable page) {
 
         Page<EnrollmentResponse> result=enrollRepo.filter(studentName,page);
         if(!studentRepo.existsByName(studentName)){
             throw new StudentNotFoundException("Check the entered name or create a student of this name and enroll");
         }
-        return result;
+        return new PageResponse<>(
+                result.getContent(),
+                result.getNumber(),
+                result.getSize(),
+                result.getTotalElements(),
+                result.getTotalPages()
+        );
     }
 //    public List<EnrollmentResponse> search(String studentName) {
 //        return enrollRepo.filter(studentName);

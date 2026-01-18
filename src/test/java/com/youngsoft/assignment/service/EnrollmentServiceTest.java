@@ -1,9 +1,6 @@
 package com.youngsoft.assignment.service;
 
-import com.youngsoft.assignment.dto.EnrollmentRequest;
-import com.youngsoft.assignment.dto.EnrollmentResponse;
-import com.youngsoft.assignment.dto.StudentEnrolled;
-import com.youngsoft.assignment.dto.StudentResponse;
+import com.youngsoft.assignment.dto.*;
 import com.youngsoft.assignment.entity.Course;
 import com.youngsoft.assignment.entity.Enrollment;
 import com.youngsoft.assignment.entity.Student;
@@ -130,7 +127,7 @@ public class EnrollmentServiceTest {
         Page<StudentEnrolled> lis=new PageImpl<>(List.of(stu1,stu2),page,2);
         when(enrollRepo.findByCourseTitle("Java",page)).thenReturn(lis);
 
-        Page<StudentEnrolled> result=enrollService.getByName("Java",page);
+        PageResponse<StudentEnrolled> result=enrollService.getByName("Java",page);
         assertThat(result.getContent().get(1).getStudentName()).isEqualTo("jill");
         assertThat(result.getContent().size()).isEqualTo(2);
     }
@@ -151,7 +148,7 @@ public class EnrollmentServiceTest {
             );
             Page<EnrollmentResponse> lis=new PageImpl<>(List.of(er1,er2),page,2);
         when(enrollRepo.filter("jack",page)).thenReturn(lis);
-        Page<EnrollmentResponse> result=enrollService.search("jack",page);
+        PageResponse<EnrollmentResponse> result=enrollService.search("jack",page);
         assertThat(result.getContent().get(0).getCourseTitle()).isEqualTo("Java");
         assertThat(result.getContent().get(1).getCourseTitle()).isEqualTo("Spring Boot");
     }

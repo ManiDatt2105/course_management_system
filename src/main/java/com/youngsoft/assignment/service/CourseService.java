@@ -2,6 +2,7 @@ package com.youngsoft.assignment.service;
 
 import com.youngsoft.assignment.dto.CourseRequest;
 import com.youngsoft.assignment.dto.CourseResponse;
+import com.youngsoft.assignment.dto.PageResponse;
 import com.youngsoft.assignment.dto.StudentCourseCount;
 import com.youngsoft.assignment.entity.Course;
 import com.youngsoft.assignment.repository.CourseRepository;
@@ -37,8 +38,13 @@ public class CourseService {
         );
     }
 
-    public Page<CourseResponse> getall(Pageable page) {
-        Page<Course> ls=courseRepo.findAll(page);
+    public PageResponse<CourseResponse> getall(Pageable page) {
+        Page<CourseResponse> ls=courseRepo.findAll(page).map(course -> new CourseResponse(
+                course.getId(),
+                course.getTitle(),
+                course.getDescription(),
+                course.getDepartment()
+        ));;
 //        Page<List<CourseResponse>> ls1= new Page<ArrayList<>>();
 //        for(Course c:ls){
 //            CourseResponse course=new CourseResponse();
@@ -46,13 +52,20 @@ public class CourseService {
 //            course.setDescription(c.getDescription());
 //            course.setTitle(c.getTitle());
 //            ls1.add(new ArrayList<>(course));
-//        }
-        return ls.map(course -> new CourseResponse(
-                course.getId(),
-                course.getTitle(),
-                course.getDescription(),
-                course.getDepartment()
-        ));
+////        }
+//        ls.map(course -> new CourseResponse(
+//                course.getId(),
+//                course.getTitle(),
+//                course.getDescription(),
+//                course.getDepartment()
+//        ));
+        return new PageResponse<CourseResponse>(
+                ls.getContent(),
+                ls.getNumber(),
+                ls.getSize(),
+                ls.getTotalElements(),
+                ls.getTotalPages()
+        );
     }
 
     public List<CourseResponse> getCourse(String name) {
