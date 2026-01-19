@@ -1,7 +1,10 @@
 package com.youngsoft.assignment.repository;
 
+import com.youngsoft.assignment.dto.PageResponse;
 import com.youngsoft.assignment.dto.StudentCourseCount;
 import com.youngsoft.assignment.entity.Course;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -19,4 +22,15 @@ public interface CourseRepository extends JpaRepository<Course,Integer> {
                    GROUP BY c.title 
             """,nativeQuery = true)
     StudentCourseCount getCount(@Param("courseName")String courseName);
+
+    @Query(value = """
+            Select 
+            c.title as courseName,
+            COUNT(e.student_id) as studentCount
+            from courses c
+            left join enrollments e on c.id=e.course_id
+            group by c.id,c.title
+            order by c.title
+            """,nativeQuery = true)
+    Page<StudentCourseCount> getAllCount(Pageable page);
 }

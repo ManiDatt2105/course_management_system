@@ -85,4 +85,16 @@ public class CourseService {
     public StudentCourseCount getCountWithName(String courseName) {
         return courseRepo.getCount(courseName);
     }
+
+    public PageResponse<StudentCourseCount> getCount(Pageable page) {
+        Page<StudentCourseCount> res= courseRepo.getAllCount(page);
+        return new PageResponse<StudentCourseCount>(
+                res.getContent(),
+                res.getNumber(),
+                res.getSize(),
+                res.getTotalElements(),
+                res.getTotalPages()
+                );
+//        return res;
+    }
 }
