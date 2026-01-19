@@ -1,5 +1,6 @@
 package com.youngsoft.assignment.service;
 
+import com.youngsoft.assignment.dto.PageResponse;
 import com.youngsoft.assignment.dto.StudentCourse;
 import com.youngsoft.assignment.dto.StudentRequest;
 import com.youngsoft.assignment.dto.StudentResponse;
@@ -36,8 +37,15 @@ public class StudentService {
             saved.getEmail());
     }
 
-    public Page<StudentCourse> fetchStudents(Pageable page) {
+    public PageResponse<StudentCourse> fetchStudents(Pageable page) {
 //        Page<StudentCourse>
-        return studentRepo.fetchStudentWithCourse(page);
+      Page<StudentCourse> res=studentRepo.fetchStudentWithCourse(page);
+      return new PageResponse<>(
+              res.getContent(),
+              res.getNumber(),
+              res.getSize(),
+              res.getTotalElements(),
+              res.getTotalPages()
+      );
     }
 }

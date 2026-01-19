@@ -1,5 +1,6 @@
 package com.youngsoft.assignment.controller;
 
+import com.youngsoft.assignment.dto.PageResponse;
 import com.youngsoft.assignment.dto.StudentCourse;
 import com.youngsoft.assignment.dto.StudentRequest;
 import com.youngsoft.assignment.dto.StudentResponse;
@@ -29,7 +30,7 @@ public class StudentController {
     }
     @GetMapping("/with_courses")
     @Operation(summary="Get student name and enrolled course name")
-    public Page<StudentCourse> studentWithCourse(Pageable page){
+    public PageResponse<StudentCourse> studentWithCourse(Pageable page){
         return studentService.fetchStudents(page);
     }
 }

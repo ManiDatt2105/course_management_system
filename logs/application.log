@@ -2126,3 +2126,132 @@ Consider defining a bean of type 'com.youngsoft.assignment.repository.CourseRepo
 2026-01-19T11:33:04.661+05:30  INFO 17576 --- [assignment] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2026-01-19T11:33:04.663+05:30  INFO 17576 --- [assignment] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
 2026-01-19T11:33:05.833+05:30  INFO 17576 --- [assignment] [http-nio-8080-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 936 ms
+2026-01-19T11:44:14.024+05:30  INFO 17576 --- [assignment] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-19T11:44:14.030+05:30  INFO 17576 --- [assignment] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-01-19T11:44:14.032+05:30  INFO 17576 --- [assignment] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-19T11:44:14.033+05:30  INFO 17576 --- [assignment] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2026-01-19T11:44:14.037+05:30  INFO 17576 --- [assignment] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2026-01-19T12:36:20.360+05:30  INFO 12212 --- [assignment] [restartedMain] c.y.assignment.AssignmentApplication     : Starting AssignmentApplication using Java 25.0.1 with PID 12212 (C:\Users\Mani.D\Desktop\Spring-boot\assignment\target\classes started by Mani.D in C:\Users\Mani.D\Desktop\Spring-boot\assignment)
+2026-01-19T12:36:20.362+05:30 DEBUG 12212 --- [assignment] [restartedMain] c.y.assignment.AssignmentApplication     : Running with Spring Boot v4.0.1, Spring v7.0.2
+2026-01-19T12:36:20.362+05:30  INFO 12212 --- [assignment] [restartedMain] c.y.assignment.AssignmentApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-01-19T12:36:20.411+05:30  INFO 12212 --- [assignment] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-01-19T12:36:20.412+05:30  INFO 12212 --- [assignment] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-01-19T12:36:21.251+05:30  INFO 12212 --- [assignment] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-19T12:36:21.316+05:30  INFO 12212 --- [assignment] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 3 JPA repository interfaces.
+2026-01-19T12:36:49.356+05:30  INFO 12212 --- [assignment] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-01-19T12:36:49.388+05:30  INFO 12212 --- [assignment] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-19T12:36:49.389+05:30  INFO 12212 --- [assignment] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-01-19T12:36:49.487+05:30  INFO 12212 --- [assignment] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 29075 ms
+2026-01-19T12:36:49.912+05:30  INFO 12212 --- [assignment] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-01-19T12:36:50.053+05:30  INFO 12212 --- [assignment] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.0.Final
+2026-01-19T12:36:51.338+05:30  INFO 12212 --- [assignment] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-19T12:36:51.425+05:30  INFO 12212 --- [assignment] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-01-19T12:36:52.555+05:30  INFO 12212 --- [assignment] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@64ebaee9
+2026-01-19T12:36:52.570+05:30  INFO 12212 --- [assignment] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-01-19T12:36:52.765+05:30  INFO 12212 --- [assignment] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/assignment]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.44
+	Default catalog/schema: assignment/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-19T12:36:55.199+05:30  INFO 12212 --- [assignment] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-19T12:36:55.373+05:30  INFO 12212 --- [assignment] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-19T12:36:55.569+05:30  INFO 12212 --- [assignment] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-01-19T12:36:57.489+05:30  WARN 12212 --- [assignment] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-19T12:36:57.538+05:30  INFO 12212 --- [assignment] [restartedMain] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2026-01-19T12:36:57.969+05:30  INFO 12212 --- [assignment] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-01-19T12:36:57.969+05:30  INFO 12212 --- [assignment] [restartedMain] c.y.assignment.AssignmentApplication     : Started AssignmentApplication in 38.233 seconds (process running for 38.818)
+2026-01-19T12:37:35.715+05:30  INFO 12212 --- [assignment] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-19T12:37:35.715+05:30  INFO 12212 --- [assignment] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-01-19T12:37:35.715+05:30  INFO 12212 --- [assignment] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-01-19T12:37:36.299+05:30  WARN 12212 --- [assignment] [http-nio-8080-exec-1] ration$PageModule$WarningLoggingModifier : Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+2026-01-19T12:40:03.126+05:30  INFO 12212 --- [assignment] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 2 deletions, 0 modifications)
+2026-01-19T12:40:03.134+05:30  INFO 12212 --- [assignment] [Thread-1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-19T12:40:03.144+05:30  INFO 12212 --- [assignment] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-01-19T12:40:03.151+05:30  INFO 12212 --- [assignment] [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-19T12:40:03.161+05:30  INFO 12212 --- [assignment] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-01-19T12:40:03.171+05:30  INFO 12212 --- [assignment] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-01-19T12:40:03.328+05:30  INFO 12212 --- [assignment] [restartedMain] c.y.assignment.AssignmentApplication     : Starting AssignmentApplication using Java 25.0.1 with PID 12212 (C:\Users\Mani.D\Desktop\Spring-boot\assignment\target\classes started by Mani.D in C:\Users\Mani.D\Desktop\Spring-boot\assignment)
+2026-01-19T12:40:03.329+05:30 DEBUG 12212 --- [assignment] [restartedMain] c.y.assignment.AssignmentApplication     : Running with Spring Boot v4.0.1, Spring v7.0.2
+2026-01-19T12:40:03.329+05:30  INFO 12212 --- [assignment] [restartedMain] c.y.assignment.AssignmentApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-01-19T12:40:03.886+05:30  INFO 12212 --- [assignment] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-19T12:40:03.941+05:30  INFO 12212 --- [assignment] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 50 ms. Found 3 JPA repository interfaces.
+2026-01-19T12:40:04.252+05:30  INFO 12212 --- [assignment] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-01-19T12:40:04.257+05:30  INFO 12212 --- [assignment] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-19T12:40:04.257+05:30  INFO 12212 --- [assignment] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-01-19T12:40:04.319+05:30  INFO 12212 --- [assignment] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 985 ms
+2026-01-19T12:40:04.449+05:30  INFO 12212 --- [assignment] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-01-19T12:40:04.539+05:30  INFO 12212 --- [assignment] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-19T12:40:04.541+05:30  INFO 12212 --- [assignment] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-01-19T12:40:04.629+05:30  INFO 12212 --- [assignment] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@f61ed23
+2026-01-19T12:40:04.629+05:30  INFO 12212 --- [assignment] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-01-19T12:40:04.629+05:30  INFO 12212 --- [assignment] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/assignment]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.44
+	Default catalog/schema: assignment/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-19T12:40:04.864+05:30  INFO 12212 --- [assignment] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-19T12:40:04.926+05:30  INFO 12212 --- [assignment] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-19T12:40:05.322+05:30  WARN 12212 --- [assignment] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-19T12:40:05.373+05:30  INFO 12212 --- [assignment] [restartedMain] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2026-01-19T12:40:05.820+05:30  INFO 12212 --- [assignment] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-01-19T12:40:05.828+05:30  INFO 12212 --- [assignment] [restartedMain] c.y.assignment.AssignmentApplication     : Started AssignmentApplication in 2.554 seconds (process running for 226.662)
+2026-01-19T12:40:05.831+05:30  INFO 12212 --- [assignment] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-01-19T12:40:07.192+05:30  INFO 12212 --- [assignment] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (2 additions, 0 deletions, 0 modifications)
+2026-01-19T12:40:07.193+05:30  INFO 12212 --- [assignment] [Thread-5] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-19T12:40:07.204+05:30  INFO 12212 --- [assignment] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-01-19T12:40:07.207+05:30  INFO 12212 --- [assignment] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-19T12:40:07.209+05:30  INFO 12212 --- [assignment] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2026-01-19T12:40:07.216+05:30  INFO 12212 --- [assignment] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2026-01-19T12:40:07.397+05:30  INFO 12212 --- [assignment] [restartedMain] c.y.assignment.AssignmentApplication     : Starting AssignmentApplication using Java 25.0.1 with PID 12212 (C:\Users\Mani.D\Desktop\Spring-boot\assignment\target\classes started by Mani.D in C:\Users\Mani.D\Desktop\Spring-boot\assignment)
+2026-01-19T12:40:07.397+05:30 DEBUG 12212 --- [assignment] [restartedMain] c.y.assignment.AssignmentApplication     : Running with Spring Boot v4.0.1, Spring v7.0.2
+2026-01-19T12:40:07.397+05:30  INFO 12212 --- [assignment] [restartedMain] c.y.assignment.AssignmentApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-01-19T12:40:07.950+05:30  INFO 12212 --- [assignment] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-19T12:40:07.991+05:30  INFO 12212 --- [assignment] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 36 ms. Found 3 JPA repository interfaces.
+2026-01-19T12:40:08.199+05:30  INFO 12212 --- [assignment] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-01-19T12:40:08.200+05:30  INFO 12212 --- [assignment] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-19T12:40:08.200+05:30  INFO 12212 --- [assignment] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-01-19T12:40:08.241+05:30  INFO 12212 --- [assignment] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 840 ms
+2026-01-19T12:40:08.325+05:30  INFO 12212 --- [assignment] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-01-19T12:40:08.426+05:30  INFO 12212 --- [assignment] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-19T12:40:08.428+05:30  INFO 12212 --- [assignment] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2026-01-19T12:40:08.478+05:30  INFO 12212 --- [assignment] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@61bb4aa9
+2026-01-19T12:40:08.478+05:30  INFO 12212 --- [assignment] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2026-01-19T12:40:08.484+05:30  INFO 12212 --- [assignment] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/assignment]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.44
+	Default catalog/schema: assignment/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-19T12:40:08.670+05:30  INFO 12212 --- [assignment] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-19T12:40:08.861+05:30  INFO 12212 --- [assignment] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-19T12:40:09.197+05:30  WARN 12212 --- [assignment] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-19T12:40:09.225+05:30  INFO 12212 --- [assignment] [restartedMain] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2026-01-19T12:40:09.573+05:30  INFO 12212 --- [assignment] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-01-19T12:40:09.573+05:30  INFO 12212 --- [assignment] [restartedMain] c.y.assignment.AssignmentApplication     : Started AssignmentApplication in 2.235 seconds (process running for 230.414)
+2026-01-19T12:40:09.573+05:30  INFO 12212 --- [assignment] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-01-19T12:40:18.536+05:30  INFO 12212 --- [assignment] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-19T12:40:18.536+05:30  INFO 12212 --- [assignment] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-01-19T12:40:18.538+05:30  INFO 12212 --- [assignment] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
